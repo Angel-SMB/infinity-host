@@ -1,0 +1,122 @@
+<html manifest="smb.cache">
+    
+<head>
+    <title>Auto GoldHEN Host</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body 
+        {
+            background-image: url("host.jpg");
+            height: 80%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+   .loader {
+        position: relative;
+        margin: -75px -75px;
+        left: 50%;
+        top: 40%;
+        width: 150px;
+        height: 150px;
+        background: linear-gradient(
+      165deg,
+      rgb(8, 23, 73) 0%,
+      rgb(25, 7, 66) 40%,
+      rgb(52, 33, 82) 98%,
+      rgb(32, 35, 54) 100%
+    );
+    border-radius: 80%;
+  }
+
+  .loader:before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    border-bottom: 0 solid #143d7a05;
+    box-shadow: 0 -10px 20px 20px #57499c32 inset,
+      0 -5px 15px 10px #457aa650 inset, 0 -2px 5px #6178cb80 inset,
+      0 -3px 2px #1c5298bb inset, 0 2px 0px #0ea5f0, 0 2px 3px #76b0ea,
+      0 5px 5px #1573bb90, 0 10px 15px #1c8ec860, 0 10px 20px 20px #6d9cca40;
+    filter: blur(3px);
+    animation: 2s rotate linear infinite;
+  }
+
+  @keyframes rotate {
+    100% { transform: rotate(360deg) }
+  }
+      
+
+        .info 
+        {
+            overflow: hidden;
+            position: fixed;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            font-size: 45px;
+            font-family: sans-serif;
+            color: #d40606;
+
+            transform: translate(-50%, -50%);
+        }
+
+        .j {
+            font-size: 15px;
+            color: #d40606;
+        }
+
+        .neon {
+  font-size: 65px;
+  color: #ddd25c;
+  text-shadow: 0 0 10px #7b0ef8, 0 0 20px #7b0ef8, 0 0 30px #7b0ef8, 0 0 40px #4000ff, 0 0 70px #4000ff, 0 0 80px #4000ff, 0 0 100px #4000ff, 0 0 150px #4000ff;
+  text-align: center;
+
+  font-family: monospace    ;
+}
+
+.N {
+  position: absolute;
+  margin-top: 35%;
+  margin-left: 2%;
+  font-size: 30px;
+  color: #720a7b;
+  text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #ffffff, 0 0 40px #4000ff, 0 0 70px #4000ff, 0 0 80px #4000ff, 0 0 100px #4000ff, 0 0 150px #4000ff;
+  text-align: center;
+
+  font-family: sans-serif;
+}
+
+    </style>
+     <h1 class="neon">GoldHEN v2.4b5</h1>
+
+     <script>
+        window.applicationCache.ondownloading=function(){document.getElementById("progress").innerHTML="Cache de host iniciado!!";};
+        window.applicationCache.onprogress=function(a){document.getElementById("progress").innerHTML=(Math.round(100*(a.loaded/a.total)))+"%";};
+        window.applicationCache.oncached=function(){document.getElementById("progress").innerHTML="Cache almacenado exitosamente!!";setTimeout(function(){document.getElementById("progress").innerHTML="Apaga el Internet & Abre de nuevo el navegador!!"; }, 1500);};
+        window.applicationCache.onnoupdate=function(){setTimeout(webkitExploit,500);};
+	    window.applicationCache.onerror=function(){setTimeout(webkitExploit,500);};
+
+        function allset() 
+        {
+            document.getElementById("loader").style.display = "none";
+            document.getElementById("allset").style.display = "block";
+        }
+
+    </script>
+    <script src="exploit.js"></script>
+</head>
+<footer>
+  <h5 class="N">INFINITY HOST</h5>
+</footer>
+<body>
+    <h1 id=progress style='font-size:25px;text-align:center;text-shadow: 4px 4px 4px black;color:yellow;'></h1><br>
+    <div id="loader" class="loader"></div>
+    <div id="allset" class="info" style="display:none;">Liberacion completada. Cierra el Navegador!</div>
+</body>
+
+</html>
